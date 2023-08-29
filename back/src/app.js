@@ -15,8 +15,6 @@ setInterval(() => {
   }
 }, SCRAPING_INTERVAL);
 
-/*  */
-
 app.use(cors());
 
 app.use("/api", countriesRanking);
