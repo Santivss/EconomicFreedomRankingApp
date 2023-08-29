@@ -10,7 +10,9 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/simpleDataCountry")
+      .get(
+        "https://economicfreedomranking-back.onrender.com/api/simpleDataCountry"
+      )
       .then((res) => {
         setCountriesData(res.data.simpleDataCountry);
       })

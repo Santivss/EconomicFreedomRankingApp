@@ -9,7 +9,9 @@ const PrincipalItem = ({ elementSelected }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/firstCountry${1}`)
+      .get(
+        `https://economicfreedomranking-back.onrender.com/api/firstCountry${1}`
+      )
       .then((res) => {
         setFirstCountry({
           ...res.data.highestScoreCountry,
@@ -24,7 +26,9 @@ const PrincipalItem = ({ elementSelected }) => {
   useEffect(() => {
     if (elementSelected) {
       axios
-        .get(`http://localhost:3000/api/individualCountry${elementSelected}`)
+        .get(
+          `https://economicfreedomranking-back.onrender.com/api/individualCountry${elementSelected}`
+        )
         .then((res) => {
           setFirstCountry(res.data.selectedCountryWithPosition);
         })

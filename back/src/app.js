@@ -15,6 +15,12 @@ setInterval(() => {
   }
 }, SCRAPING_INTERVAL);
 
+try {
+  requestDataWeb();
+} catch (error) {
+  console.error("Error:", error);
+}
+
 app.use(cors());
 
 app.use("/api", countriesRanking);
