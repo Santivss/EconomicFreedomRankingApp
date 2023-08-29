@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model WebPageMetadata {
+  id                   Int      @id @default(autoincrement())
+  title                String
+  applicationName      String
+  msApplicationTooltip String
+  ogImage              String     
+  description          String   
+  keywords             String
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model CountryData {
+  id Int @id @default(autoincrement())
+  title String @unique
+  overallScore Float? 
+  propertyRights Float? 
+  judicialEffectivness Float? 
+  governmentIntegrity Float? 
+  businessFreedom Float? 
+  laborFreedom Float? 
+  monetaryFreedom Float? 
+  taxBurden Float? 
+  governmentSpending Float? 
+  fiscalHealth Float? 
+  tradeFreedom Float? 
+  investmentFreedom Float? 
+  financialFreedom Float? 
+  description String @unique
+  background String @unique
+  ruleOfLawDescription String @unique
+  governmentSizeDescription String @unique
+  regulatoryEfficiencyDescription String @unique
+  openMarketsDescription String @unique
+  population Float? 
+  pbiPerCapita Float? 
+  unemployment Float? 
+  inflation Float? 
+  publicDebt Float? 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+

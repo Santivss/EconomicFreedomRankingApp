@@ -1,0 +1,46 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Santi\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add cors
+
+PATH: 
+  C:\Users\Santi\bin;D:\Software\Git\mingw64\bin;D:\Software\Git\usr\local\bin;D:\Software\Git\usr\bin;D:\Software\Git\usr\bin;D:\Software\Git\mingw64\bin;D:\Software\Git\usr\bin;C:\Users\Santi\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Software\Git\cmd;C:\Program Files\nodejs;C:\Program Files\PostgreSQL\15\bin;C:\Users\Santi\AppData\Local\Microsoft\WindowsApps;D:\Software\Microsoft VS Code\bin;C:\Users\Santi\AppData\Roaming\npm;D:\Software\Git\usr\bin\vendor_perl;D:\Software\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Santi\Desktop\EconomicFreedomRanking\back\node_modules\prisma\engines\6a3747c37ff169c90047725a05a6ef02e32ac97e\query_engine-windows.dll.node'
+
+npm manifest: 
+  {
+    "name": "back",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+      "dev": "nodemon src/app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@prisma/client": "^5.2.0",
+      "cross-env": "^7.0.3",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "nodemon": "^3.0.1",
+      "playwright": "^1.37.1",
+      "prisma": "^5.1.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

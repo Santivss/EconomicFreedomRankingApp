@@ -1,0 +1,145 @@
+.items__container {
+  background-color: var(--color-azulMarino);
+  margin: 2rem;
+  border-radius: 1rem;
+  height: 50rem;
+  overflow: auto;
+  position: relative;
+}
+
+.itemsContainer__title {
+  background-color: var(--color-azulMediaNoche);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--color-text-1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+input {
+  border: 1px solid gray;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-azulMarino);
+  transition: 200ms ease;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+  border-color: yellow;
+}
+
+.countryList__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.countryCategories__container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1fr 1.7fr 1.7fr 1.7fr;
+  align-content: center;
+  justify-items: center;
+  background-color: var(--color-azulMarino);
+  z-index: 2;
+  padding: 1rem 0;
+}
+
+.category__item {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-5);
+  transition: 200ms ease;
+  gap: 0.3rem;
+  user-select: none;
+}
+
+.category__item:hover {
+  color: var(--color-text-1);
+  cursor: pointer;
+}
+
+.active {
+  color: white;
+}
+
+.left {
+  justify-self: start;
+  margin-left: 1rem;
+}
+
+.countryCategory__triangle_icon {
+  width: 0.7rem;
+  opacity: 0.4;
+  transition: 200ms ease;
+}
+
+.triangle_icon-active {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.triangle_icon-false {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.countryListItem__container {
+  height: 3rem;
+  background-color: var(--color-azulMediaNoche);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 0.6fr 2fr 1fr 1.7fr 1.7fr 1.7fr;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  transition: 200ms ease;
+  /* padding-left: 1rem; */
+  position: relative;
+  box-shadow: 5px 2px 5px 0px #00000080;
+}
+
+.countryListItem__container:hover {
+  background-color: var(--color-azulMediaNoche-hover);
+}
+
+.decorativeLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  width: 10px;
+  height: 100%;
+}
+
+.free {
+  background-color: var(--color-purpuraIntenso);
+}
+
+.mostlyFree {
+  background-color: yellow;
+}
+
+.countryListItem__rank-title {
+  color: yellow;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.countryListItem__country-title {
+  justify-self: start;
+  margin-left: 1rem;
+}
+
+.elementAlignLeft {
+  justify-self: start;
+}

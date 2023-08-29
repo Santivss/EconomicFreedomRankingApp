@@ -1,0 +1,39 @@
+.app__container {
+  width: 60vw;
+  margin: 3rem auto;
+  padding: 2rem 0;
+  background-color: var(--color-negroIntenso);
+  border-radius: 2rem;
+  position: relative;
+}
+
+.shape_1 {
+  position: absolute;
+  width: 40rem;
+  top: 0;
+  left: -15rem;
+  z-index: -1;
+  filter: blur(150px);
+}
+
+.shape_2 {
+  content: "";
+  position: absolute;
+  width: 40rem;
+  top: 15rem;
+  right: -15rem;
+  z-index: -1;
+  filter: blur(150px);
+  transform: rotate(90deg);
+}
+
+.shape_3 {
+  content: "";
+  position: absolute;
+  width: 40rem;
+  bottom: 0;
+  left: -15rem;
+  z-index: -1;
+  filter: blur(150px);
+  transform: rotate(90deg);
+}
