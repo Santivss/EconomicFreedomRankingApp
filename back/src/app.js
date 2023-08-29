@@ -18,8 +18,10 @@ setInterval(() => {
 app.use(cors());
 
 app.use("/api", countriesRanking);
-app.use("/", () => {
-  return "Hello world!";
+app.use("/santi", (req, res) => {
+  res.status(200).json({
+    message: "Hello",
+  });
 });
 
 app.listen(3000, () => {
