@@ -6,6 +6,7 @@ import cors from "cors";
 const app = express();
 
 const SCRAPING_INTERVAL = process.env.SCRAPING_INTERVAL || 604800000;
+const PORT = process.env.PORT || 3000;
 
 setInterval(() => {
   try {
@@ -19,6 +20,6 @@ app.use(cors());
 
 app.use("/api", countriesRanking);
 
-app.listen(3000, () => {
-  console.log("Server is running in port 3000");
+app.listen(PORT, () => {
+  console.log("Server is running");
 });
