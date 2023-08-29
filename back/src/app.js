@@ -18,6 +18,9 @@ setInterval(() => {
 app.use(cors());
 
 app.use("/api", countriesRanking);
+app.use("/", () => {
+  return "Hello world!";
+});
 
 app.listen(3000, () => {
   console.log("Server is running");
