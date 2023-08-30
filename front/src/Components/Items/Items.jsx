@@ -26,6 +26,12 @@ const Items = ({ countriesData, countrySelectedForRequest }) => {
     state: true,
   });
 
+  const [countrySelected, setCountrySelected] = useState(null);
+
+  const handleCountrySelected = (selectedCountry) => {
+    setCountrySelected(selectedCountry?.title);
+  };
+
   const handleCategoryClick = (categoryName) => {
     setActiveCategory((prevActiveCategory) => {
       if (prevActiveCategory.categoryName === categoryName) {
@@ -106,11 +112,14 @@ const Items = ({ countriesData, countrySelectedForRequest }) => {
             .replace(/\.$/, "");
 
           return (
-            <div
+            <button
               key={item.id}
-              className="countryListItem__container"
+              className={`countryListItem__container ${
+                countrySelected === item.title ? "countrySelected__active" : ""
+              }`}
               onClick={() => {
-                countrySelectedForRequest(item.title);
+                countrySelectedForRequest(item.title),
+                  handleCountrySelected(item);
               }}
             >
               <div className="decorativeLine"></div>
@@ -126,7 +135,7 @@ const Items = ({ countriesData, countrySelectedForRequest }) => {
               <span>{item.population ? item.population : "N/A"} M</span>
               <span>{item.taxBurden ? `${item.taxBurden}%` : "N/A"}</span>
               <span>{item.inflation ? `${item.inflation}%` : "N/A"}</span>
-            </div>
+            </button>
           );
         })}
       </div>

@@ -40,9 +40,10 @@ const PrincipalItem = ({ elementSelected }) => {
 
   return (
     <div className="principalItem__container">
-      <h1 className="principalItem__title">{firstCountry?.title}</h1>
+      <h1 id="principalItem__titleId" className="principalItem__title">
+        {firstCountry?.title}
+      </h1>
       <span className="principalItem__rank-title">{firstCountry?.pos}</span>
-      <span>Puntaje general</span>
       <span className="principalItem__description">
         {firstCountry?.description}
       </span>
