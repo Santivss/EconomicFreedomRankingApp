@@ -7,14 +7,14 @@ const app = express();
 
 const SCRAPING_INTERVAL = process.env.SCRAPING_INTERVAL || 604800000;
 
-/* setInterval(() => {
+setInterval(() => {
   try {
     requestDataWeb();
   } catch (error) {
     console.error("Error:", error);
   }
 }, SCRAPING_INTERVAL);
- */
+
 app.use(cors());
 
 app.use("/api", countriesRanking);

@@ -36,7 +36,6 @@ const App = () => {
       />
       <img src={shape_1} alt="shape_1" className="shape_1" />
       <img src={shape_1} alt="shape_1" className="shape_2" />
-      <img src={shape_1} alt="shape_1" className="shape_3" />
     </div>
   );
 };
