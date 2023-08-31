@@ -97,7 +97,11 @@ const Items = ({ countriesData, countrySelectedForRequest }) => {
                   activeCategory.categoryName === index ? "active" : ""
                 } ${item === "Nombre" ? "left" : ""} ${
                   item === "PBI" ? "elementAlignLeft" : ""
-                }`}
+                }
+                ${item === "Habitantes" ? "elementAlignLeft" : ""}
+                ${item === "Carga Fiscal" ? "elementAlignLeft" : ""}
+                ${item === "Inflación" ? "elementAlignLeft" : ""}
+                `}
               >
                 {item}
                 <img
