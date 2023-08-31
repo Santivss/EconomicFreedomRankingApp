@@ -8,6 +8,18 @@
   min-width: 50%;
 }
 
+@media (max-width: 1600px) {
+  .items__container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .items__container {
+    margin: 2rem 0 0 0;
+  }
+}
+
 .spinner-active {
   display: flex;
   align-items: center;
@@ -176,7 +188,7 @@ input:focus {
 
 .spinnerIcon__items {
   width: 7rem;
-  animation: spinner 3s infinite linear;
+  animation: spinner 4s infinite linear;
 }
 
 @keyframes spinner {
@@ -184,6 +196,6 @@ input:focus {
     transform: rotate(0);
   }
   100% {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
   }
 }

@@ -46,8 +46,6 @@ const PrincipalItem = ({ elementSelected }) => {
     }
   }, [elementSelected]);
 
-  console.log(firstCountry);
-
   return (
     <div className="principalItem__container">
       {requestStatus ? (
@@ -60,9 +58,96 @@ const PrincipalItem = ({ elementSelected }) => {
               #{firstCountry?.pos}
             </span>
           </h1>
-          <span className="principalItem__description">
-            {firstCountry?.description}
+
+          <span className="principalItem__stats-description-title">
+            Descripción:
+            <span className="principalItem__stats-description">
+              {firstCountry?.description}
+            </span>
           </span>
+
+          <div className="principalItem__stats-container">
+            <span className="principalItem__description-title">
+              Estadísticas
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Derechos de propiedad:
+              </span>
+              {firstCountry?.propertyRights}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Efectividad Judicia:l
+              </span>
+              {firstCountry?.judicialEffectivness}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Integridad del gobierno:
+              </span>
+              {firstCountry?.governmentIntegrity}%
+            </span>
+
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad empresarial:
+              </span>
+              {firstCountry?.businessFreedom}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad Laboral:
+              </span>
+              {firstCountry?.laborFreedom}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad monetaria:
+              </span>
+              {firstCountry?.monetaryFreedom}%
+            </span>
+
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">Carga fiscal:</span>
+              {firstCountry?.taxBurden}%
+            </span>
+
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">Salud fiscal:</span>
+              {firstCountry?.fiscalHealth}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad de comercio:
+              </span>
+              {firstCountry?.tradeFreedom}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad de inversión:
+              </span>
+              {firstCountry?.investmentFreedom}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">
+                Libertad financiera:
+              </span>
+              {firstCountry?.financialFreedom}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">Inflación:</span>
+              {firstCountry?.inflation}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">Deuda Pública:</span>
+              {firstCountry?.publicDebt}%
+            </span>
+            <span className="principalItem__description">
+              <span className="principalItem__desc-title">Desempleo:</span>
+              {firstCountry?.unemployment}%
+            </span>
+          </div>
         </>
       )}
     </div>

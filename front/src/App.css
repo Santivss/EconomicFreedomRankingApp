@@ -1,16 +1,45 @@
 .app__container {
   width: 80vw;
   margin: 3rem auto;
-  /* padding: 2rem 0; */
   background-color: var(--color-negroIntenso);
   border-radius: 2rem;
   display: flex;
   position: relative;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1600px) {
   .app__container {
     width: 100vw;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 6rem;
+  }
+  .shape_1 {
+    display: none;
+  }
+  .shape_2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .app__container {
+    margin: 1rem auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .app__container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app__container {
+    width: 100vw;
+    margin: auto;
   }
 }
 
