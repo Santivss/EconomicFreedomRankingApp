@@ -3,10 +3,6 @@ import { prisma } from "../db.js";
 
 const routes = Router();
 
-/* const country = await prisma.CountryData.findFirst();
-
-console.log(country.pbiPerCapita); */
-
 routes.get("/simpleDataCountry", async (req, res) => {
   try {
     const countries = await prisma.CountryData.findMany();
